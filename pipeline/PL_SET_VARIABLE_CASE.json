@@ -1,0 +1,68 @@
+{
+	"name": "PL_SET_VARIABLE_CASE",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "x",
+					"value": "10"
+				}
+			},
+			{
+				"name": "Set Y",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Y",
+					"value": "20"
+				}
+			},
+			{
+				"name": "XY",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set Y",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "x",
+					"value": {
+						"value": "@variables('Y')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"x": {
+				"type": "String"
+			},
+			"Y": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
