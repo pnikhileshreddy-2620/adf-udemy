@@ -1,0 +1,30 @@
+{
+	"name": "PL_DYNAMIC",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Time",
+					"value": {
+						"value": "@substring(utcNow(),0,10)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"Time": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
