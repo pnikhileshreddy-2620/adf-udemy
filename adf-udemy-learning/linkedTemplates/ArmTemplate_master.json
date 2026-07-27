@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_OUTPUT'"
 		},
+		"LS_PART1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_PART1'"
+		},
 		"Ls_BlobStorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Ls_BlobStorage'"
@@ -84,6 +88,9 @@
 					"LS_OUTPUT_connectionString": {
 						"value": "[parameters('LS_OUTPUT_connectionString')]"
 					},
+					"LS_PART1_connectionString": {
+						"value": "[parameters('LS_PART1_connectionString')]"
+					},
 					"Ls_BlobStorage_connectionString": {
 						"value": "[parameters('Ls_BlobStorage_connectionString')]"
 					},
@@ -112,6 +119,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'adf-udemy-learning_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "adf-udemy-learning_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-udemy-learning_ArmTemplate_1')]"
 			]
 		}
 	]

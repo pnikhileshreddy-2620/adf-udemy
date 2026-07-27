@@ -23,6 +23,9 @@
 		"LS_OUTPUT_connectionString": {
 			"value": ""
 		},
+		"LS_PART1_connectionString": {
+			"value": ""
+		},
 		"Ls_BlobStorage_connectionString": {
 			"value": ""
 		},
