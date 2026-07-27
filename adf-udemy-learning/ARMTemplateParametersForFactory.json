@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-udemy-learning"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"LS_BLOB_SWITCH_connectionString": {
+			"value": ""
+		},
+		"LS_GEN2_accountKey": {
+			"value": ""
+		},
+		"LS_LOOKUP_connectionString": {
+			"value": ""
+		},
+		"LS_ONLY_CSV_FILES_connectionString": {
+			"value": ""
+		},
+		"LS_OUTPUT_connectionString": {
+			"value": ""
+		},
+		"Ls_BlobStorage_connectionString": {
+			"value": ""
+		},
+		"LS_GEN2_properties_typeProperties_url": {
+			"value": "https://adlsgen2udmey.dfs.core.windows.net/"
+		}
+	}
+}
