@@ -1,0 +1,15 @@
+{
+	"name": "adf-udemy-learning",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "997ab2b9-e8be-46fd-8b3e-51a2c6e4cb19",
+		"tenantId": "521e944d-8344-4032-bcc6-2543d7d13272"
+	}
+}

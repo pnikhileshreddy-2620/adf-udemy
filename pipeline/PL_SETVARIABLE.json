@@ -1,0 +1,43 @@
+{
+	"name": "PL_SETVARIABLE",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "area",
+					"value": {
+						"value": "@mul(variables('length'),variables('breath'))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"num": {
+				"type": "Integer"
+			},
+			"length": {
+				"type": "Integer",
+				"defaultValue": 10
+			},
+			"breath": {
+				"type": "Integer",
+				"defaultValue": 10
+			},
+			"area": {
+				"type": "Integer"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-07-26T03:12:37Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

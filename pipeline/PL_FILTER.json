@@ -1,0 +1,36 @@
+{
+	"name": "PL_FILTER",
+	"properties": {
+		"activities": [
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.listofstring",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@contains(item(),'C')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"listofstring": {
+				"type": "array",
+				"defaultValue": [
+					"Apple",
+					"Banana",
+					"Cherry"
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-07-26T12:15:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
