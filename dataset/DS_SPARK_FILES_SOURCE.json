@@ -1,0 +1,26 @@
+{
+	"name": "DS_SPARK_FILES_SOURCE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SPARK_FILES_SOURCE",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "sourcefiles"
+			}
+		}
+	}
+}
